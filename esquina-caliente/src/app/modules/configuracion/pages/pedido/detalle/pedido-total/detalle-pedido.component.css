@@ -1,0 +1,106 @@
+.br-top{
+    margin-top: 4rem;
+}
+.customClass{
+    border: 1px solid white
+}
+.card{
+    padding: 20px;
+}
+.panel .card{
+    background: red!important;
+}
+.spacing-left-r{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.total_texto{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+.deuda_total{
+    color: red;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.titulo-caliente{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    color: black;
+}
+
+#ico-down{
+    color: #009BEA;
+    background: white;
+    font-size: 16px;
+}
+.card-title{
+    text-align: center;
+    margin-top: -2rem;
+    color: #009BEA;
+    font-family: sans-serif;
+    margin-bottom: 2rem;
+}
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}

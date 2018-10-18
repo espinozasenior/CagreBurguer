@@ -1,0 +1,47 @@
+<div class="container br-top">
+    <div class="row">
+        <div class="col-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <countdown-timer class="timer" [end]="fecha"></countdown-timer>            
+            <h3 class="card-title">Solo falta minutos.....</h3>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 col-md-12 col-sm-12 col-xl-12">
+            <div class="well">
+                <table class="table">
+                  <thead>
+                    <tr >
+                      <th>#</th>
+                      <th>Nombre</th>
+                      <th>Pedido</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let itempedido of pedido">
+                      <td>1</td>
+                      <td>{{nombre}}</td>
+                      <td>{{itempedido.descripcion}}</td>
+                      <td>
+                          <button type="button" class="btn btn-danger btn-sm">Proceso</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+            </div>
+        
+        </div>
+        
+    </div>
+     <div class="row mt-3">
+        <div class="col-12 col-md-12 col-sm-12">
+            <div class="float-left">
+                <button type="button" class="btn btn-outline-primary" (click)="volver()"><i class="fa fa-arrow-left"></i> Volver</button>
+            </div>
+            <div class="float-right">
+                <button type="button" class="btn btn-outline-primary" (click)="finalizar()">Salir <i class="fa fa-arrow-right"></i> </button>
+            </div>
+        </div>
+    </div>
+</div>

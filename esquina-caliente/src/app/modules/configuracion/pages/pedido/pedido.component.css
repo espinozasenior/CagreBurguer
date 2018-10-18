@@ -1,0 +1,28 @@
+#about{
+    margin-top: 5rem;
+}
+
+#user-title{
+    padding-top: 3rem;
+    PADDING-BOTTOM: 0.5REM;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background: #0066ff!important;
+    font-family: sans-serif;
+}
+
+.titulo-user{
+    font-family: sans-serif;
+    color: #0066ff;
+}
+
+.card-text{
+    color: #757575;
+    font-family: sans-serif;
+}
