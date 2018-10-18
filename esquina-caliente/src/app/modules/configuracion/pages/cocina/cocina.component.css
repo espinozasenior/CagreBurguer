@@ -1,0 +1,17 @@
+.br-top{
+    margin-top: 4rem;
+}
+
+.timer{
+    font-size:30px;
+    color:white;
+    background-color:#0066ff!important;
+    padding:30px;
+    font-family:Roboto;
+}
+
+.card-title{
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+
+}

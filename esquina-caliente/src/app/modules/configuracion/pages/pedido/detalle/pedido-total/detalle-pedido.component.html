@@ -1,0 +1,86 @@
+<div class="container  br-top">
+    <h4 class="titulo-caliente">Aroma, calidad y sabor en la Esquina Caliente <i class="fa fa-coffee"></i></h4>
+    <div class="row">
+        <div class="col-12 col-md-6 col-sm-6 col-xl-6">
+            <div class="card" style="width: auto;">
+              <div class="card-body">
+                  <h5 class="card-title">Disfruta del mejor cafe</h5>
+                      <div class="row" *ngFor="let cafeTime of cafe">
+                          <div class="col-2 col-sm-2 col-md-2 text-left">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="{{cafeTime.precio}}"                         (change)="eventochecked($event,cafeTime.nombre)">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-5 col-sm-5 col-md-5 text-center spacing-left-r">
+                            <p>{{cafeTime.nombre}}</p>
+                          </div>
+                          <div class="col-md-5 text-right">
+                            <p>S/ {{cafeTime.precio | number: '.2-2'}}</p>    
+                          </div>
+                           
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-7 col-sm-7 col-md-7 text-center">
+                            <p class="total_texto">Total</p>
+                          </div>
+                          <div class="col-5 col-sm-5 col-md-5 text-right">
+                            <p class="deuda_total">S/ {{total_compra | number: '.2-2'}}</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-md-6 col-sm-6 col-xl-6">
+            <div class="card" style="width: auto;">
+              <div class="card-body">
+                  <h5 class="card-title">Acompañalo con piqueos</h5>
+                      <div class="row" *ngFor="let otherTime of others">
+                          <div class="col-2 col-sm-2 col-md-2 text-left">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="{{otherTime.precio}}"                         (change)="eventochecked($event, otherTime.nombre)">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-5 col-sm-5 col-md-5 text-center spacing-left-r">
+                            <p>{{otherTime.nombre}}</p>
+                          </div>
+                          <div class="col-5 col-sm-5 col-md-5 text-right">
+                            <p>S/ {{otherTime.precio | number: '.2-2'}}</p>    
+                          </div>
+                          <hr>
+                      </div>
+                  <accordion>
+                      <accordion-group [panelClass]="customClass">
+                        <button class="btn btn-link btn-block clearfix" accordion-heading>
+                          <div class="pull-left float-left">Comentarios del pedido</div>
+                          <span class="badge badge-secondary float-right pull-right" id="ico-down"><i class="fa fa-arrow-down"></i></span>
+                        </button>
+                                  <textarea class="form-control" placeholder="Quiero que mi cafe...." id="exampleFormControlTextarea1" rows="3"></textarea>    
+                      </accordion-group>
+                  </accordion>
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="alert alert-light" role="alert" *ngIf="mensa!=true">
+      {{mensaje}}
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-12 col-sm-12">
+            <div class="float-left">
+                <button type="button" class="btn btn-outline-primary"><i class="fa fa-arrow-left"></i> Volver</button>
+            </div>
+            <div class="float-right">
+                <button type="button" class="btn btn-outline-primary" (click)="finalizar()">Finalizar <i class="fa fa-arrow-right"></i> </button>
+            </div>
+        </div>
+    </div>
+    
+</div>
