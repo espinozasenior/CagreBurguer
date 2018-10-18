@@ -6,7 +6,7 @@ No logre terminar el proyecto como hubiera querido debido al poco tiempo que ten
 
 ## Diseño
 
-Para comenzar a realizar los bosquejos, tenia que pensar como un cliente de la "Esquina Caliente" y se me vino a la mente: rapido, intuitivo y que no tenga tantos pasos para poder saber el tiempo de demora del pedido.
+Para comenzar a realizar los bosquejos tenia que pensar como un cliente de la "Esquina Caliente" y se me vino a la mente: rapido, intuitivo y que no tenga tantos pasos para poder saber el tiempo de demora del pedido.
 
 ## Tecnología 
 El proyecto lo trabaje con angular 6.v+.
