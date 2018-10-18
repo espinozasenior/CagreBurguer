@@ -21,7 +21,7 @@ Para realizar las pantallas me guie por 2 puntos importante:
 * Intuitivo
 * Tiempo
 
-Los bosquejos esta dividido en 4 secciones :
+Los bosquejos estan dividido en 4 secciones :
 1.- Visualiza una vista para ingresar el nombre.
 2.- Puede elegir la categoría.
 3.- Agrega los items.
