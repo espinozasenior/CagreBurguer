@@ -41,7 +41,7 @@ agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el total.
 ## Objetivos
 
 El objetivo principal de este proyecto es construir una
-_interfaz web_ usando el _framework_ elegido (React, Vue o Angular). Todos estos
+_interfaz web_ usando el _framework_ elegido (React o Vue). Todos estos
 frameworks de front-end atacan el mismo problema: **cómo mantener la interfaz y
 el estado sincronizados**. Así que esta experiencia espera familiarizarse con
 el concepto de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
@@ -51,7 +51,7 @@ a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
 Finalmente, la interfaz debe estar diseñada específicamente para correr en
 **tablets**.
 
-Tópicos: _react_, _redux_, _angular_, _vue_, _pwa_
+Tópicos: _react_, _redux_, _vue_, _nuxt_
 
 ## Consideraciones generales
 
@@ -61,19 +61,15 @@ si por otras razones crees no poder tener el tiempo suficiente para hacerlo
 (por ejemplo: tu actual trabajo te lo imposibilita) pero te crees capaz de tener
 la destreza para realizarlo, IGUAL comunícate con nosotros**
 
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-Debes elegir entre [React](https://reactjs.org/), [Vue](https://vuejs.org/) o
-[Angular](https://angular.io/).
+La lógica del proyecto debe estar implementada completamente en TypeScript,
+HTML y CSS y empaquetada de manera automatizada.
+Debes elegir entre [React](https://reactjs.org/) o [Vue](https://vuejs.org/)
 
 La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
 _tablet_, pero **no queremos una app nativa**, sino una web app que sea
 **responsive**. También necesitamos botones
 grandes para escoger los productos, y el estado actual del pedido siempre
 visible para poder confirmar con el cliente.
-
-La aplicación desplegada debe tener 70% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
 
 La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
 `test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
@@ -129,13 +125,13 @@ tipo _story board_, info de despliegue e instrucciones para developers
 
 ## BACKEND
 
-El Back-End del proyecto puede ser el de tu preferencia: **PHP, NODE, Firebase, etc**. Si crees conveniente basar toda la información a través de un JSON no hay problema, tampoco es necesario que la información se almacene permanentemente porque al final lo que más nos interesa es el aspecto Frontend.
+El Back-End del proyecto puede estar desarrollado en **Nest.js o Sprint Boot**. Si crees conveniente basar toda la información (Base de datos) a través de un JSON no hay problema, tampoco es necesario que la información se almacene permanentemente porque al final lo que más nos interesa es el aspecto Frontend y el estilo de programación backend.
 
 ## Entregables
 
 El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada implementando el servicio de hosting de tu preferencia.
-Por último notificarnos enviando un correo con el link del repositorio al correo: **luis@kambista.com**
+interfaz será desplegada implementando [docker-compose](https://docs.docker.com/compose/).
+Por último notificarnos enviando un correo con el link del repositorio al correo: **telentohumano@kambista.com**
 
 ## Evaluación
 
@@ -143,40 +139,26 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
 
 | Habilidad | Nivel esperado |
 |-----------|----------------|
-| **JavaScript** | |
+| **JavaScript/TypeScript** | |
 | Estilo | 4
 | Nomenclatura/semántica | 3
 | Funciones/modularidad | 3
 | Estructuras de datos | 3
 | Tests | 3
-| **HTML** | |
-| Validación | 3
-| Estilo | 3
-| Semántica | 3
-| SEO | n/a
+| **Backend** | |
+| Estructura de código | 4
+| Acoplamiento | 3
+| Semántica | 2
 | **CSS** | |
-| DRY | 3
-| Responsive | 3
+| DRY | 2
+| Responsive | 2
 | **SCM** | |
-| Git | 3
-| GitHub | 3
+| Git | 2
+| GitHub | 2
 | **CS** | |
-| Lógica | 3
-| Arquitectura | 2
+| Lógica | 2
+| Arquitectura | 1
 | Patrones/paradigmas | n/a
-
-### UX
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 3
-| Testing | 3
-| User Flow | 3
-| Jerarquía | 3
-| Alineación | 3
-| Contraste | 3
-| Color | 3
-| Tipografía | 3
 
 ## Primeros pasos
 
@@ -203,13 +185,7 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
 * [Vue](https://vuejs.org/)
-* [Angular](https://angular.io/)
-
-### Herramientas
-
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
+* [NestJS](https://nestjs.com/)
 
 ## Checklist
 
@@ -223,13 +199,6 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
 * [ ] Documenta proceso de diseño.
 * [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
   ...).
-
-### Lighthouse
-
-* [ ] 70% o más en sección _Performance_.
-* [ ] 70% o más en sección _Progressive Web App_.
-* [ ] 70% o más en sección _Accessibility_.
-* [ ] 70% o más en sección _Best Practices_.
 
 ### Tests
 
@@ -248,9 +217,3 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
 * [ ] Eliminar ítem del pedido.
 * [ ] Mostrar _resumen_ de pedido con todos los items y el total.
 * [ ] Enviar a cocina.
-
-### UX
-
-* [ ] Se _ve_ bien y _funciona_ bien en tablets.
-* [ ] Uso fácil en pantallas táctiles (touch screens).
-* [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.
