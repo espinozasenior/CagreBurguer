@@ -125,13 +125,13 @@ tipo _story board_, info de despliegue e instrucciones para developers
 
 ## BACKEND
 
-El Back-End del proyecto puede estar desarrollado en **Nest.js o Sprint Boot**. Si crees conveniente basar toda la información (Base de datos) a través de un JSON no hay problema, tampoco es necesario que la información se almacene permanentemente porque al final lo que más nos interesa es el aspecto Frontend y el estilo de programación backend.
+El Back-End del proyecto puede estar desarrollado en **Node (Nest.js es un plus) o Java (Spring Boot es una plus)**. Si crees conveniente basar toda la información (Base de datos) a través de un JSON no hay problema, tampoco es necesario que la información se almacene permanentemente porque al final lo que más nos interesa es el aspecto Frontend y el estilo de programación backend.
 
 ## Entregables
 
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada implementando [docker-compose](https://docs.docker.com/compose/).
-Por último notificarnos enviando un correo con el link del repositorio al correo: **telentohumano@kambista.com**
+- Debe poder ser desplegado implementando [docker-compose](https://docs.docker.com/compose/).
+- Realizar un Commit de su proyecto, enviar un Pull Request al branch con su NOMBRE, y notificar a la siguiente dirección de correo electrónico **telentohumano@kambista.com**
+- Crear un archivo comprimido (.zip o .rar) de su proyecto y enviar a la siguiente dirección de correo electrónico **telentohumano@kambista.com**.
 
 ## Evaluación
 
@@ -171,12 +171,12 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
    cd kambista-esquina-caliente
    ```
 
-3. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
+3. Crea una rama a partir de `master` utilizando su nombre completo para empezar a trabajar. Por ejemplo:
 
    ```sh
-   git checkout -b develop
+   git checkout -b luis-espinoza
    ```
-4. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
+4. Llegado a este punto ya puedes comenzar a trabajar.
 
 ## Pistas / Tips
 
@@ -186,6 +186,8 @@ Por último notificarnos enviando un correo con el link del repositorio al corre
 * [Redux](https://redux.js.org/)
 * [Vue](https://vuejs.org/)
 * [NestJS](https://nestjs.com/)
+* [Spring Boot](https://spring.io/projects/spring-boot/)
+* [docker-compose](https://docs.docker.com/compose/)
 
 ## Checklist
 
