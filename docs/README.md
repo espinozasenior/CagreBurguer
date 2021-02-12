@@ -10,7 +10,7 @@ Los datos que se muestran en pantalla son obtenidos de un json localmente el cu�
 
 Para llevar a cabo este proyecto se realizó bocetos y la identificación del flujo más optimo que debe realizar el usuario.
 
-> Para poder iniciar sesión utilize la siguiente cuenta de prueba: ***usuario: admin@gmail.com y contraseña: admin***
+> Para poder iniciar sesión utilice la siguiente cuenta de prueba: ***usuario: admin@gmail.com y contraseña: admin***
 
 La estructura de la aplicación es la siguiente.
 

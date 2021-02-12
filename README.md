@@ -1,221 +1,159 @@
 # Esquina Caliente
 
-## Preámbulo
+<img src="./docs/preview.png" alt="preview" />
 
-Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
-restautante que nos ha contactado porque quieren que alguien les construya una
-interfaz donde puedan tomar pedidos usando una tablet.
+[Ver demo](http://esquina-caliente.surge.sh)
 
-Como punto de partida,
-nos comparten el siguiente correo recibido del cliente:
+## Descripción 🚀
+El proyecto fué desarrollado siguiendo las consideraciones dadas.
+Los datos que se muestran en pantalla son obtenidos de un json localmente el cuál se puede reemplazar por un servicio externo.
 
-> Somos **Esquina Caliente**, una cadena de comida rápida 24hrs.
->
-> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida, y para
-> expandirnos necesitamos un sistema que nos ayude a tomar los pedidos de los
-> clientes.
->
-> Tenemos 1 menú bien sencillo:
->
-> | Item                      |Precio|
-> |---------------------------|------|
-> | Cafe americano            |    5 |
-> | Cafe con leche            |    7 |
-> | Sandwich de jamón y queso |   10 |
-> | Jugo natural              |    7 |
+Para llevar a cabo este proyecto se realizó bocetos y la identificación del flujo más optimo que debe realizar el usuario.
 
-## Introducción
+> Para poder iniciar sesión utilice la siguiente cuenta de prueba: ***usuario: admin@gmail.com y contraseña: admin***
 
-Partiendo de los requerimientos de negocio detallados en el correo del cliente,
-nos piden construir **una interfaz que permita a los cajeros tomar los pedidos
-en una tablet, y desde ahí se puedan enviar a cocina** a través de un backend del
-que nos darán detalles más adelante.
+La estructura de la aplicación es la siguiente.
 
-El primer paso de este proyecto debe ser convertir el menú descrito por el
-cliente en una estructura que podamos poner en un archivo JSON para después
-_pintar_ en la pantalla.
+El la carpeta **core** es donde se tiene toda la información para acceder a servicios externos ya sea una API, sistemas de autenticación, datos de prueba, etc. 
 
-Nuestra interfaz debe mostrar el menú, cada uno. El usuario debe poder ir eligiendo que _productos_
-agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el total.
+Los hooks que son reusables globalmente ya sea usando el store se encuentran en la carpeta **hooks**.
 
-## Objetivos
+La carpeta **routes** maneja todas las pantallas principales como:
+* Dashboard: Pantalla principal.
+* GetStartedScreen: Dar bienvenida al usuario por única vez.
+* LoginScreen: Iniciar sesión antes de ingresar al sistema principal.
 
-El objetivo principal de este proyecto es construir una
-_interfaz web_ usando el _framework_ elegido (React o Vue). Todos estos
-frameworks de front-end atacan el mismo problema: **cómo mantener la interfaz y
-el estado sincronizados**. Así que esta experiencia espera familiarizarse con
-el concepto de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
+Los componentes globales y funciones ayudantes se encuentran alojadas en la carpeta **shared**.
 
-Finalmente, la interfaz debe estar diseñada específicamente para correr en
-**tablets**.
+El flujo principal para mantener todos los datos actualizados está dentro de la carpeta **store** cual fué desarrollada con Redux.
 
-Tópicos: _react_, _redux_, _vue_, _nuxt_
+En **modules** se ubica una serie de funcionalidades complejas pero independientes. Si se desea lleva a una sola pantalla, insertar sus componentes será totalmente sencillo.
 
-## Consideraciones generales
+Las pantallas donde vive su logica se encuentra en **screens** dentro cada uno tiene sus propios componentes, hooks y otras utilidades que solo serán usadas en ese paquete.
 
-**No es INDISPENSABLE completar la totalidad del proyecto. Si por alguna razón
-no pudiste culminarlo IGUAL comunícate con nosotros para evaluar el progreso y
-si por otras razones crees no poder tener el tiempo suficiente para hacerlo
-(por ejemplo: tu actual trabajo te lo imposibilita) pero te crees capaz de tener
-la destreza para realizarlo, IGUAL comunícate con nosotros**
+```
+├───core
+│   ├───data
+│   ├───entities
+│   └───services
+├───hooks
+├───modules
+│   ├───AllFoods
+│   ├───CreateNewOrderToCustomer     
+│   ├───CurrentOrderMenu
+│   └───Payments
+├───routes
+├───screens
+│   ├───DashboardScreen
+│   │   ├───routes
+│   │   └───views
+│   │       ├───RootScreens
+│   │       │   ├───HistoryOrdersScreen
+│   │       │   ├───HomeProductsScreen
+│   │       │   └───PendingOrdersScreen
+│   │       └───SidebarNavigation
+│   ├───GetStartedScreen
+│   └───LoginScreen
+├───shared
+│   ├───components
+│   └───utils
+├───store
+│   ├───authentication
+│   ├───foods
+│   └───orders
+└───styles
+```
 
-La lógica del proyecto debe estar implementada completamente en TypeScript,
-HTML y CSS y empaquetada de manera automatizada.
-Debes elegir entre [React](https://reactjs.org/) o [Vue](https://vuejs.org/)
+## Pre-requisitos 📋
+Para comenzar el programa es necesario tener instalado Node>=10, Docker y docker-compose.
+Aquí dejo los enlaces de descarga de los siguiente recursos por si aún no tienes algún programa.
+* [Node](https://nodejs.org/en/download/)
+* [Docker](https://docs.docker.com/docker-for-windows/install/)
 
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive**. También necesitamos botones
-grandes para escoger los productos, y el estado actual del pedido siempre
-visible para poder confirmar con el cliente.
+## Tecnologías 🛠️
+Las principales tecnologías usadas para la implementación del proyecto son las siguientes:
 
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
+<a href="https://reactjs.org/" target="_blank">
+<img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+</a>
+<a href="https://www.typescriptlang.org/" target="_blank">
+<img alt="TypeScript" src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+</a>
+<a href="https://tailwindcss.com/" target="_blank">
+<img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+</a>
+<a href="https://redux-toolkit.js.org/" target="_blank">
+<img alt="Redux" src="https://img.shields.io/badge/redux%20-%23593d88.svg?&style=for-the-badge&logo=redux&logoColor=white"/>
+</a>
+<a href="https://material-ui.com/" target="_blank">
+<img alt="Material UI" src="https://img.shields.io/badge/material%20ui%20-%230081CB.svg?&style=for-the-badge&logo=material-ui&logoColor=white"/>
+</a>
+<a href="https://www.figma.com/" target="_blank">
+<img alt="Figma" src="https://img.shields.io/badge/figma%20-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white"/>
+</a>
+<a href="https://jestjs.io/" target="_blank">
+<img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?&style=for-the-badge&logo=jest&logoColor=white"/>
+</a>
+<a href="https://docs.docker.com/compose/" target="_blank">
+<img alt="Docker" src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
+</a>
 
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_.
 
-Por otro lado, la parte de la interfaz no está incluida, por lo cual, deberás de
-definir la estructura de carpetas y archivos que consideres necesaria, puedes
-guiarte de las convenciones del framework elegido. Por ende, los tests y el
-setup necesario para ejecutarlos serán realizados por ti.
+## Uso ⚙️
 
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+Los siguientes comandos han de ser ejecutados dentro de la carpeta del proyecto.
 
-## Parte obligatoria
 
-### Definición del producto
+**Uso con npm-scripts**
 
-En el `README.md` cuéntanos qué decisiones de diseño tomaste, incluye bocetos
-tipo _story board_, info de despliegue e instrucciones para developers
-(dependencias, instalación, tests, ...).
+Antes de poder usar el proyecto es necesario instalar las dependencias.
 
-### UI
+```console
+$ npm install
+```
 
-#### Tomar pedidos
+Para poder ver el funcionamiento en desarrollo ejecutar el siguiente comando.
 
-* Ingresar nombre del cliente.
-* Filtrar _menú_ por _desayuno_ y _resto del día_.
-* Agregar ítem al pedido.
-* Eliminar ítem del pedido.
-* Mostrar _resumen_ de pedido con todos los items y el total.
-* Enviar a cocina (esto debe guardar el pedido).
+```console
+$ npm start
+```
 
-#### Ver/atender pedidos
+Si desea ejecutar las pruebas del sistema es necesario escribir el siguiente comando. 
 
-* Vista de pedidos pendientes
-* Marcar pedido como listo
-* Ver historial de pedidos
+```console
+$ npm run test
+```
 
-#### Autenticación
 
-* Inicio de sesión
+Finalmente para poder construir la aplicación utilize el siguiente comando que creará una carpeta **build** done estará todo el código listo para producción.
+```console
+$ npm run build
+```
 
-### UX
+**Uso con docker**
 
-* Debe **verse bien y funcionar bien en tablets**.
-* Queremos botones grandes para fácil uso en pantallas táctiles (touch screens).
-* Queremos el estado actual del pedido siempre visible mientras tomamos un
-  pedido.
-* Queremos que sea accesible y que funcione bien en tablets.
+Para usar con docker es necesario ejecutar los siguientes comandos.
 
-## BACKEND
+```console
+$ npm run docker:image
+```
 
-El Back-End del proyecto puede estar desarrollado en **Node (Nest.js es un plus) o Java (Spring Boot es una plus)**. Si crees conveniente basar toda la información (Base de datos) a través de un JSON no hay problema, tampoco es necesario que la información se almacene permanentemente porque al final lo que más nos interesa es el aspecto Frontend y el estilo de programación backend.
+```console
+$ npm run docker:compose
+```
 
-## Entregables
+Luego navegar a la siguiente url [http://localhost:5000](http://localhost:5000) en su navegador preferido.
 
-- Debe poder ser desplegado implementando [docker-compose](https://docs.docker.com/compose/).
-- Realizar un Commit de su proyecto, enviar un Pull Request al branch con su NOMBRE, y notificar a la siguiente dirección de correo electrónico **telentohumano@kambista.com**
-- Crear un archivo comprimido (.zip o .rar) de su proyecto y enviar a la siguiente dirección de correo electrónico **telentohumano@kambista.com**.
+## Funcionalidades desarrolladas
+* [x] Inicio de sesión
+* [x] Ingresar nombre del cliente.
+* [x] Filtrar menú por desayuno y resto del día.
+* [x] Agregar ítem al pedido.
+* [x] Eliminar ítem del pedido.
+* [x] Mostrar resumen de pedido con todos los items y el total.
+* [x] Enviar a cocina y guardar el pedido.
+* [x] Vista de pedidos pendientes.
+* [x] Marcar pedido como listo.
+* [x] Ver historial de pedidos.
 
-## Evaluación
-
-### Tech
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript/TypeScript** | |
-| Estilo | 4
-| Nomenclatura/semántica | 3
-| Funciones/modularidad | 3
-| Estructuras de datos | 3
-| Tests | 3
-| **Backend** | |
-| Estructura de código | 4
-| Acoplamiento | 3
-| Semántica | 2
-| **CSS** | |
-| DRY | 2
-| Responsive | 2
-| **SCM** | |
-| Git | 2
-| GitHub | 2
-| **CS** | |
-| Lógica | 2
-| Arquitectura | 1
-| Patrones/paradigmas | n/a
-
-## Primeros pasos
-
-1. Haz un _fork_ de este repo (en GitHub).
-
-2. Clona tu _fork_ en tu computadora:
-
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/kambista-esquina-caliente.git
-   cd kambista-esquina-caliente
-   ```
-
-3. Crea una rama a partir de `master` utilizando su nombre completo para empezar a trabajar. Por ejemplo:
-
-   ```sh
-   git checkout -b luis-espinoza
-   ```
-4. Llegado a este punto ya puedes comenzar a trabajar.
-
-## Pistas / Tips
-
-### Frameworks / libraries
-
-* [React](https://reactjs.org/)
-* [Redux](https://redux.js.org/)
-* [Vue](https://vuejs.org/)
-* [NestJS](https://nestjs.com/)
-* [Spring Boot](https://spring.io/projects/spring-boot/)
-* [docker-compose](https://docs.docker.com/compose/)
-
-## Checklist
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-* [ ] Estética y fluidez de los elementos y procesos.
-
-### `README.md`
-
-* [ ] Documenta proceso de diseño.
-* [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
-  ...).
-
-### Tests
-
-* [ ] 70% o más en cobertura de _statements_.
-* [ ] 70% o más en cobertura de _functions_.
-* [ ] 70% o más en cobertura de _lines_.
-* [ ] 70% o más en cobertura de _branches_.
-
-### UI
-
-#### Tomar pedidos
-
-* [ ] Ingresar nombre del cliente.
-* [ ] Desplegar _menú_.
-* [ ] Agregar ítem al pedido.
-* [ ] Eliminar ítem del pedido.
-* [ ] Mostrar _resumen_ de pedido con todos los items y el total.
-* [ ] Enviar a cocina.
+Hay ciertas partes que se hubiera mejorado, por temas de tiempo no se terminó, sin embargo fué un gran reto 😊.
