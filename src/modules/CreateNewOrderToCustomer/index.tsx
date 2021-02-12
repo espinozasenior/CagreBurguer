@@ -1,0 +1,1 @@
+export { default as CreateNewNameConsumer} from "./containers/CreateNewNameConsumer"
