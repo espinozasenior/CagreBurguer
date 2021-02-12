@@ -1,0 +1,12 @@
+:root {
+    --primary-color:rgb(240,50,80);
+    --payment-primary-color:rgb(30,130,230);
+    --cancel-payment-primary-color:rgb(240,50,80);
+    --text-primary-color-alpha-100:white;
+    --text-message-color-neutral:silver;
+    --app-background-color:rgb(241, 241, 241);
+    --sidebar-navigator-color:white;
+    --sidebar-navigator-width:100px;
+    --sidebar-navigator-height:auto;
+    --sidebar-current-order-width:330px;
+}

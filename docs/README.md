@@ -1,6 +1,6 @@
 # Esquina Caliente
 
-<img src="./docs/preview.png" alt="preview" />
+<img src="./preview.png" alt="preview" />
 
 [Ver demo](http://esquina-caliente.surge.sh)
 

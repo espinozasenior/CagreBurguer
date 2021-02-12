@@ -1,0 +1,19 @@
+{
+    "colorize.languages": [
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "postcss",
+        "xml",
+        "svg",
+        "json",
+        "javascript",
+        "typescript"
+    ],
+    "css.validate": false,
+    "tailwindCSS.validate": true,
+    "tailwindCSS.includeLanguages": {
+        "textPlain" : "typescript"
+    }
+}
